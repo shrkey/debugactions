@@ -39,7 +39,7 @@ class debugactions
 	}
 
 	function add_menu() {
-		$hook = add_options_page( __('Debug Actions','debugactions'), __('Debug Actions','debugactions'), 'manage_options', 'debugactions//', array( &$this, 'show_debug_actions'));
+		$hook = add_management_page( __('Debug Actions','debugactions'), __('Debug Actions','debugactions'), 'manage_options', 'debugactions//', array( &$this, 'show_debug_actions'));
 
 		add_action( 'load-' . $hook, array( &$this, 'process_debug_actions' ) );
 	}
